@@ -7,7 +7,16 @@ namespace Tyuiu.ShanginAA.Sprint5.Task5.V25.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            
+            double res = -5973964.557;
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) == null)
+                {
+                    res *= Convert.ToDouble(line);
+                }
+            }
+            return res;
         }
     }
 }

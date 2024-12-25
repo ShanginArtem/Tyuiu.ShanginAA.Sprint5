@@ -26,18 +26,16 @@ namespace Tyuiu.ShanginAA.Sprint5.Task6.V14
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Введите значение x");
-            int x = Convert.ToInt32(Console.ReadLine());
+            string path = Path.Combine(new string[] { Path.GetTempPath(), "InPutDataFileTask6V14.txt" });
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            ds.SaveToFileTextData(x);
+            Console.WriteLine("данные находятся в файле " + path);
 
-            string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.bin" });
-            string result = File.ReadAllText(path);
-            Console.Write(result);
+            double res = ds.LoadFromDataFile(path);
+            Console.WriteLine(res);
 
             Console.ReadKey();
 
