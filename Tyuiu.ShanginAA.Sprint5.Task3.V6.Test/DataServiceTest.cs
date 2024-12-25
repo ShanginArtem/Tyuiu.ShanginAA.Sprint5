@@ -1,3 +1,6 @@
+using System.IO;
+using Tyuiu.ShanginAA.Sprint5.Task3.V6.Lib;
+
 namespace Tyuiu.ShanginAA.Sprint5.Task3.V6.Test
 {
     [TestClass]
